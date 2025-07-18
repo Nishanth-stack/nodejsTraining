@@ -9,9 +9,17 @@
       { id: 1, name: "Item 1" },
       { id: 2, name: "Item 2"},
     ];
+    const product = [
+      { id: 1, name: "biryani" },
+      { id: 2, name: "tandoori"},
+    ];
 
     app.get("/api/items", (req, res) => {
       res.json(data);
+    });
+
+    app.get("/api/products", (req, res) => {
+      res.json(product);
     });
 
     app.listen(port, () => {
